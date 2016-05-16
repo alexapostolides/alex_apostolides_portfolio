@@ -951,7 +951,7 @@ object {
 
 .home-page-job-description {
   font-family: "anivers", "Courier";
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 300;
   text-align: center;
   letter-spacing: 5px;
@@ -1072,6 +1072,14 @@ color:black;
   font-variant: small-caps;
 }
 
+.page-template-page-front .entry-content h1:first-child {
+	padding-top: 1.5em;
+	margin-bottom: 0em;
+}
+
+.page-template-page-front .entry-content h5 {
+	margin-top: .5em;
+}
 
 
 
