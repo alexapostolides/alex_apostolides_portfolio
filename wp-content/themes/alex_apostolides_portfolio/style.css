@@ -1334,8 +1334,8 @@ ____________________
 border-left: 1px solid black;
     margin: 0 0em 0em -1.7em;
     width: 500px;
-    top: 2.4em;
-    bottom: 4.72em;
+    top: 2.31em;
+    bottom: 3.95em;
     height: auto;
     position: absolute;
     background-color: white;
@@ -1405,8 +1405,8 @@ position: fixed;
     width: 500px;
     height: auto;
     position: absolute;
-    top: 2.56em;
-    bottom: 5.55em;
+    top: 2.5em;
+    bottom: 4.71em;
     background-color: white;
     z-index: 99999;
 }
