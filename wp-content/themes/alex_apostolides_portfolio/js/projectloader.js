@@ -18,12 +18,13 @@ $(window).load(function() {
 
    var is_mobile = false;
 
-    if( $('#work').css('display')=='none') {
+    if( $('#mobileLogo').css('display')=='inline-block') {
         is_mobile = true;       
     }
 
     if (is_mobile == true) {
-        $("logo").hide();
+        $("logo").remove();
+        return true;
     }
 
 

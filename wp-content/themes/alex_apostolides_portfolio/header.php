@@ -59,7 +59,7 @@ NAVIGATION
 <p id="work" class="WorkInfo">work</p>
 
 <nav id="menu"  role="navigation">
-<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 </nav>
 
 </div>
@@ -88,6 +88,11 @@ MOBILE
 <div id="mobileEmail">
 	<img style="width: 3.5em;" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileEmail2.png">
 </div>
+
+
+<img id="mobileLogo" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileLogo.png">
+
+
 
 <div id="mobileContactOverlay">
 	<div id="mobileXemail"><img style="width: 3em;" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileX.png"></div>
