@@ -2,6 +2,12 @@
 
 get_header(); ?>
 
+<style type="text/css">
+html, body {
+  overflow: hidden;
+}
+</style>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
