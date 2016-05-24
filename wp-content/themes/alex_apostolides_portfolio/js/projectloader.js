@@ -52,6 +52,7 @@ $(document).ready(function () {
 MOBILE
 */
             $("#mobileWork").click(function(){
+
                 $("#slideoutleft").css("left", "460px");
                 $(".menu-item a").addClass('mobileProject');
                 $("#mobileXproject").click(function(){
@@ -63,7 +64,25 @@ MOBILE
                     $("#mobileLogo, #previewOverlay").hide();
                     $("#close").css("top","-2em");
                 });
+
             });
+
+
+// REMOVES STYLING ON LEFT SLIDER WHEN PAGE RESIZES
+
+            $(window).resize(function(){
+
+                var windowsize = $(window).width();
+
+                if (windowsize > 600 && $("#slideoutleft").css('left')=='19px') {
+                    //alert('greater than');
+                    $("#slideoutleft").css( 'left', '' );
+                }
+
+            });
+
+
+// EMAIL OVERLAY IN MOBILE & SMALL WINDOW
 
             $("#mobileEmail").click(function(){
                     $("#mobileContactOverlay").fadeIn('fast');
