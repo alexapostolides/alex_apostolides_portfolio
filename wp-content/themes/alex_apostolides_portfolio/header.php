@@ -59,7 +59,7 @@ NAVIGATION
 <p id="work" class="WorkInfo">work</p>
 
 <nav id="menu"  role="navigation">
-<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 </nav>
 
 </div>
@@ -114,8 +114,14 @@ OTHER
 <!-- Preview Images -->
 
 <div id="previewOverlay">
-	<img id="preview_1" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/01/preview.png">
-	<img id="preview_2" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/01/metaBW.png">
+
+<?php $preview_1 = wp_get_attachment_url( get_post_thumbnail_id("2")); ?>
+<div id="preview_1" style="display: none; background-image: url(<?php echo $preview_1 ?>);"></div>
+
+<?php $preview_2 = wp_get_attachment_url( get_post_thumbnail_id("1791")); ?>
+<div id="preview_2" style="display: none; background-image: url(<?php echo $preview_2 ?>);"></div>
+
+
 </div>
 
 
@@ -155,6 +161,12 @@ BORDERS
 
 
 
+<div id="content" class="site-content">
 
 
-	<div id="content" class="site-content">
+
+
+
+
+
+

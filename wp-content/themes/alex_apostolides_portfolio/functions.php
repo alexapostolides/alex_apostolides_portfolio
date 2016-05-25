@@ -43,9 +43,7 @@ function alex_apostolides_portfolio_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'alex_apostolides_portfolio' ),
-	) );
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -144,6 +142,8 @@ function alex_apostolides_portfolio_scripts() {
     wp_register_script( 'projectloader', get_stylesheet_directory_uri() . '/js/projectloader.js', array('jquery'));
     wp_enqueue_script( 'projectloader' );
 
+
+if ( is_page('front-page')) {
     wp_register_script( 'threemin', get_stylesheet_directory_uri() . '/js/three.min.js', '');
     wp_enqueue_script( 'threemin' );
 
@@ -155,6 +155,7 @@ function alex_apostolides_portfolio_scripts() {
 
     wp_register_script( 'cube', get_stylesheet_directory_uri() . '/js/cube.js', '', '', true);
     wp_enqueue_script( 'cube' );
+}
 
     wp_register_script( 'videoScrollLoader', get_stylesheet_directory_uri() . '/js/videoScrollLoader.js', '');
     wp_enqueue_script( 'videoScrollLoader' );   
