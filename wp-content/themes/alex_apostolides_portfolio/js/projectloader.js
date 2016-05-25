@@ -3,15 +3,8 @@ jQuery(document).ready(function ($) {
 
 $(window).load(function() {
 
-   var pathname = window.location.pathname;
-
-
 $("logo").delay('1300').fadeIn('slow');
 
-    if (pathname.indexOf("projects") > -1) {
-        $("logo").remove();
-        return true;
-    }
 });
 
 $(window).load(function() {
@@ -75,6 +68,11 @@ MOBILE
                 var windowsize = $(window).width();
 
                 if (windowsize > 600 && $("#slideoutleft").css('left')=='19px') {
+                    //alert('greater than');
+                    $("#slideoutleft").css( 'left', '' );
+                }
+
+                if (windowsize > 600 && $("#slideoutleft").css('left')=='460px') {
                     //alert('greater than');
                     $("#slideoutleft").css( 'left', '' );
                 }
