@@ -4,12 +4,16 @@ get_header(); ?>
 
 <style type="text/css">
 html, body {
-  overflow: hidden;
+  overflow: hidden;		
 }
 </style>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+
+<!-- Mobile Logo -->
+<img id="mobileLogo" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileLogo.png">
 
 			<?php
 			while ( have_posts() ) : the_post();

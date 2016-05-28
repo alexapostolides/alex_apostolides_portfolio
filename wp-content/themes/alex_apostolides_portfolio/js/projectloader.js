@@ -42,17 +42,28 @@ $(document).ready(function () {
                 $("logo").delay('1400').fadeIn('slow');
             });
 /*
-MOBILE
+------------------------------------------------------------------------------------------------------
+MOBILE - Portait
+------------------------------------------------------------------------------------------------------
 */
+
+
             $("#mobileWork").click(function(){
 
-                $("#slideoutleft").css("left", "460px");
+                // Slides when clicked
+                $("#slideoutleft").css("left", "-30px");
+
+                // Adds class to Nav links
                 $(".menu-item a").addClass('mobileProject');
+
+                // Exit out of Mobile Nav
                 $("#mobileXproject").click(function(){
-                    $("#slideoutleft").css("left", "19px");
+                    $("#slideoutleft").css("left", "-783px");
                 });
+
+                // Exit out of Mobile Nav when you click a project
                 $(".mobileProject").click(function(){
-                    $("#slideoutleft").css("left", "19px");
+                    $("#slideoutleft").css("left", "-183px");
                     $("#mobileContactOverlay").fadeOut('fast');
                     $("#mobileLogo, #previewOverlay").hide();
                     $("#close").css("top","-2em");
@@ -61,21 +72,23 @@ MOBILE
             });
 
 
+
 // REMOVES STYLING ON LEFT SLIDER WHEN PAGE RESIZES
 
             $(window).resize(function(){
 
                 var windowsize = $(window).width();
 
-                if (windowsize > 600 && $("#slideoutleft").css('left')=='19px') {
+                if (windowsize > 750 && $("#slideoutleft").css('left')=='-783px') {
                     //alert('greater than');
                     $("#slideoutleft").css( 'left', '' );
                 }
 
-                if (windowsize > 600 && $("#slideoutleft").css('left')=='460px') {
+                if (windowsize > 750 && $("#slideoutleft").css('left')=='-30px') {
                     //alert('greater than');
                     $("#slideoutleft").css( 'left', '' );
                 }
+
 
             });
 
@@ -84,11 +97,19 @@ MOBILE
 
             $("#mobileEmail").click(function(){
                     $("#mobileContactOverlay").fadeIn('fast');
-                    $("#slideoutleft").css("left", "19px");
+                    $("#slideoutleft").css("left", "-783px");
                     $("#mobileXemail").click(function(){
                         $("#mobileContactOverlay").fadeOut('fast');
                     });
             });
+
+/*
+------------------------------------------------------------------------------------------------------
+END MOBILE
+------------------------------------------------------------------------------------------------------
+*/
+
+
 
         });
 });

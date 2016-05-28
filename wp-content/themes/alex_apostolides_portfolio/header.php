@@ -90,17 +90,18 @@ MOBILE
 </div>
 
 
-<img id="mobileLogo" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileLogo.png">
 
 
 
 <div id="mobileContactOverlay">
+	<div class="contactOverlayContainer">
 	<div id="mobileXemail"><img style="width: 3em;" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileX.png"></div>
 	<img id="mobileOverlayLogo" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileLogo.png">
 	<p class="mobileName">ALEX APOSTOLIDES</p>
 	<p class="mobileDescription">Graphic design graduate at the Conservatory of Art & Design at Purchase College, SUNY. Currently based in New York. Looking for full time work.</p>
 	<ul>hello@alexapostolides.com</ul>
 	<ul>Resume</ul>
+	</div>
 </div>
 
 
@@ -116,10 +117,13 @@ OTHER
 <div id="previewOverlay">
 
 <?php $preview_1 = wp_get_attachment_url( get_post_thumbnail_id("2")); ?>
-<div id="preview_1" style="display: none; background-image: url(<?php echo $preview_1 ?>);"></div>
+<div id="preview_1" class="previewProject" style="display: none; background-image: url(<?php echo $preview_1 ?>);"></div>
 
 <?php $preview_2 = wp_get_attachment_url( get_post_thumbnail_id("1791")); ?>
-<div id="preview_2" style="display: none; background-image: url(<?php echo $preview_2 ?>);"></div>
+<div id="preview_2" class="previewProject" style="display: none; background-image: url(<?php echo $preview_2 ?>);"></div>
+
+<?php $preview_3 = wp_get_attachment_url( get_post_thumbnail_id("1777")); ?>
+<div id="preview_3" class="previewProject" style="display: none; background-image: url(<?php echo $preview_3 ?>);"></div>
 
 
 </div>

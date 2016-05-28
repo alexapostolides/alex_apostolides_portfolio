@@ -57,6 +57,7 @@ html {
 	-ms-text-size-adjust:     100%;
 }
 
+
 body {
 	margin: 0;
 	font-family: 'open-sans';
@@ -384,7 +385,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+
 }
 
 ul {
@@ -914,11 +915,19 @@ object {
     font-size: 8em;
     line-height: 1em;
     margin-top: 1em;
-    padding: 0 .5em 0 .5em;
+    padding: 0 1em 0 1em;
+}
+
+.menu ul {
+	margin: 0 0 1.5em 4em;
 }
 
 .entry-footer {
 	display: none;
+}
+
+#page {
+	text-align: center;
 }
 
 #contact p {
@@ -986,6 +995,14 @@ background-color: black;
 a:active {
 	text-decoration: none;
 	color: black;
+}
+
+.featuredImageContainer {
+	text-align: center;
+}
+
+.featuredImageContainer img {
+	padding: 6em 6em 0em 5.5em;
 }
 
 
@@ -1066,6 +1083,10 @@ color:black;
 	margin-bottom: 0em;
 }
 
+.page-template-page-front .entry-title {
+	display: none;
+}
+
 .page-template-page-front .entry-content h5 {
 	margin-top: .5em;
 }
@@ -1085,199 +1106,6 @@ header #projects {
 }
 
 
-/* SMALL BROWSER */
-@media (max-width: 600px) {
-
-
-
-.page-template-page-front .entry-content h1:first-child {
-	padding-top: 1.5em;
-	margin-bottom: 0em;
-	padding-left: 1em;
-    padding-right: 1em;
-}
-
-header #projects {
-  margin-top: 40em;
-}
-
-.entry-header .entry-title {
-	font-size: 4em;
-}
-
-#leftborder {
-	overflow-y: scroll;
-}
-
-#mobileXproject {
-	z-index: 999999;
-}
-
-#mobileXproject img {
-	position: fixed;
-}
-
-#menu li a {
-	line-height: 1;
-}
-
-logo {
-	width: 90%;
-}
-
-#page #work {
-	display: none;
-}
-
-#page #info {
-	display: none;
-}
-
-#page #mobileWork {
-    display: block;
-    position: fixed;
-	left: 2.2em;
-    top: 2em;
-    z-index: 999999;
-}
-
-#page #mobileXproject {
-	display: block;
-    position: absolute;
-    left: 4em;
-    top: 1em;
-}
-
-#page #mobileXemail {
-	display: block;
-    position: absolute;
-    right: 1.5em;
-    top: 1.7em;
-}
-
-#page #mobileEmail {
-	display: block;
-	position: fixed;
-	z-index: 9999;
-    right: 1.7em;
-    top: 1.5em;
-}
-
-#page .mobileDescription {
-	font-size: 30pt;
-    margin: 1em auto 0em auto;
-    max-width: 18em;
-    line-height: 1.3;
-}
-
-#page #mobileContactOverlay {
-	position: fixed;
-	z-index: 99999;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background-color: white;
-}
-
-#page .name {
-	font-size: 62px;
-    margin-top: 1em;
-}
-
-#page .graphicdesignheader{
-	font-size: 20px;
-	margin: 1em 0 0 0;
-}
-
-#page .footer {
-	display: none;
-}
-
-#page #topborder {
-	height: 17px;
-}
-
-header #leftborder {
-	top: 1.57em;
-	bottom: 3.8em;
-    margin: 0em 0em 0em -31.2em;
-}
-
-#page #slideoutleft:hover {
-  left:18px;
-}
-
-#page #slideoutright:hover {
-  right:18px;
-}
-
-#page #slideoutright {
-	z-index: 9999991;
-}
-
-#page #rightborder {
-top: 1.4em;
-margin: 0;
-bottom: 3em;
-}
-
-#page #bottomborder {
-	bottom:-23px;
-}
-
-
-
-#page #mobileOverlayLogo {
-	display: inline-block;
-	width: 150px;
-    margin-top: 3em;
-}
-
-#page .mobileName {
-  font-family: "Open sans", "open-sans", "opensans-bold" "sans-serif";
-  max-width: 100%;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 5px;
-  color: black;
-  line-height: 40px;
-}
-
-#projects {
-    font-size: 18pt;
-    margin-top: 39em;
-    margin-right: 1.1em;
-}
-
-.mobileMenu {
-    border: 1px solid black;
-    width: 2em;
-    height: .3em;
-    margin: .2em;
-}
-
-.projectTitle {
-    font-size: 70pt;
-    top: -.3em;
-    left: 0.4em;
-
-} 
-
-#menu {
-	width: 4em;
-    text-align: left;
-    font-size: 6em;
-    line-height: 2;
-    padding: 0;
-    margin: auto;
-}
-
-
-
-}
-
 
 /*
 ____________________
@@ -1289,7 +1117,6 @@ ____________________
 
 
 
-
 #previewOverlay {
     position: fixed;
     left: 0;
@@ -1297,7 +1124,7 @@ ____________________
     top: 0;
     bottom: 0;
     z-index: 99;
-    background-color: white;
+
     display: none;
             -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein .2s; /* Firefox < 16 */
@@ -1308,30 +1135,21 @@ ____________________
 
 
 
-#preview_1 {
+.previewProject {
     -webkit-animation: fadein .5s;
     -moz-animation: fadein .5s;
     -ms-animation: fadein .5s;
     -o-animation: fadein .5s;
     animation: fadein .5s;
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1);
     width: 100%;
     height: 100%;
     background-repeat: repeat;
-    background-size: 20%;
-
-}
-
-#preview_2 {
-    -webkit-animation: fadein .5s;
-    -moz-animation: fadein .5s;
-    -ms-animation: fadein .5s;
-    -o-animation: fadein .5s;
-    animation: fadein .5s;
-    width: 100%;
-    height: 100%;
-    background-repeat: repeat;
-    background-size: 20%;
-
+    background-size: 40%;
 }
 
 
@@ -1604,7 +1422,6 @@ position: fixed;
 
 #leftborder {
     border-right: solid 1px;
-    margin: 0em 0em 0em -29.8em;
     width: 500px;
     height: auto;
     position: absolute;
@@ -1619,7 +1436,7 @@ position: fixed;
     top: -.55em;
     bottom: -2.8em;
     height: auto;
-    left: 18px;
+    left: -460px;
     background-color: white;
     z-index: 9999999;
     -webkit-transition-duration: 0.3s;
@@ -1629,7 +1446,7 @@ position: fixed;
 }
 
 #slideoutleft:hover {
-  left: 300px;
+  left: -200px;
 }
 
 #projects {
@@ -1734,14 +1551,22 @@ ____________________
 
 
 /*
-____________________
+________________________________________________________________________________________________________________________
 
 MOBILE
-____________________   
+________________________________________________________________________________________________________________________
 
 */
 
 
+
+/*
+____________________
+
+SET UP
+____________________   
+                                     
+*/
 
 #mobileLogo {
 	display: none;
@@ -1763,22 +1588,70 @@ ____________________
 	display: none;
 }
 
-/*  TABLET */
-@media only screen and (max-device-width: 1024px) {
 
-body, html {
-	overflow: scroll;
+/*
+____________________
+
+RESIZE TO SMALLER BROWSER
+____________________   
+                                     
+*/
+@media (max-width: 750px) {
+
+
+
+.page-template-page-front .entry-content h1:first-child {
+	padding-top: 1.5em;
+	margin-bottom: 0em;
+	padding-left: 1em;
+    padding-right: 1em;
 }
 
-#work {
+.featuredImageContainer img {
+	padding: 1em 0 0 0;
+}
+
+header #projects {
+  margin-top: 40em;
+}
+
+.entry-header .entry-title {
+	font-size: 3em;
+}
+
+#leftborder {
+	overflow-y: scroll;
+}
+
+#mobileXproject {
+	z-index: 999999;
+}
+
+#mobileXproject img {
+	position: fixed;
+}
+
+#menu li a {
+	line-height: 1;
+}
+
+#menu li {
+	padding-bottom: 1em;
+}
+
+logo {
+	width: 90%;
+}
+
+#page #work {
 	display: none;
 }
 
-#info {
+#page #info {
 	display: none;
 }
 
-#mobileWork {
+#page #mobileWork {
     display: block;
     position: fixed;
 	left: 2.2em;
@@ -1786,21 +1659,21 @@ body, html {
     z-index: 999999;
 }
 
-#mobileXproject {
+#page #mobileXproject {
 	display: block;
     position: absolute;
     left: 4em;
     top: 1em;
 }
 
-#mobileXemail {
+#page #mobileXemail {
 	display: block;
     position: absolute;
     right: 1.5em;
     top: 1.7em;
 }
 
-#mobileEmail {
+#page #mobileEmail {
 	display: block;
 	position: fixed;
 	z-index: 9999;
@@ -1808,14 +1681,17 @@ body, html {
     top: 1.5em;
 }
 
-.mobileDescription {
-	font-size: 30pt;
-    margin: 1em auto 0em auto;
-    max-width: 18em;
+#page .mobileDescription {
+	font-size: 1.1em;
+    margin: 2em auto 0em auto;
+    max-width: 14em;
+    text-align: left;
     line-height: 1.3;
+    font-family: anivers;
+    font-weight: 700;
 }
 
-#mobileContactOverlay {
+#page #mobileContactOverlay {
 	position: fixed;
 	z-index: 99999;
 	top: 0;
@@ -1823,71 +1699,77 @@ body, html {
 	right: 0;
 	left: 0;
 	background-color: white;
+	text-align: center;
 }
 
-.name {
+#page .name {
 	font-size: 62px;
     margin-top: 1em;
 }
 
-.graphicdesignheader{
+#page .graphicdesignheader{
 	font-size: 20px;
 	margin: 1em 0 0 0;
 }
 
-.footer {
+#page .footer {
 	display: none;
 }
 
-#topborder {
-	height: 1em;
+#page #topborder {
+	height: 17px;
 }
 
-#leftborder {
+header #leftborder {
 	top: 1.57em;
-	bottom: 3.67em;
-    margin: 0em 0em 0em -31.2em;
+	bottom: 3.8em;
+	width: 800px;
 }
 
-#slideoutleft:hover {
-  left:18px;
+#page #slideoutleft {
+	left:-783px;
 }
 
-#slideoutright:hover {
+#page #slideoutleft:hover {
+  left:-783px;
+}
+
+#page #slideoutright:hover {
   right:18px;
 }
 
-#rightborder {
+#page #slideoutright {
+	z-index: 9999991;
+}
+
+#page #rightborder {
 top: 1.4em;
 margin: 0;
-bottom: 2.86em;
+bottom: 3em;
 }
 
-#bottomborder {
-	bottom:-30px;
+#page #bottomborder {
+	bottom:-23px;
 }
 
-#mobileLogo{
-	display: inline-block;
-	width: 450px;
-    margin-top: 7em;
+
+
+#page #mobileOverlayLogo {
+	display: inline;
+    width: 240px;
+    margin-top: 2.5em;
 }
 
-#mobileOverlayLogo {
-	display: inline-block;
-	width: 150px;
-    margin-top: 3em;
-}
-
-.mobileName {
-  font-family: "Open sans", "open-sans", "opensans-bold" "sans-serif";
-  max-width: 100%;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 5px;
-  color: black;
-  line-height: 40px;
+#page .mobileName {
+    font-family: "Open sans", "open-sans", "opensans-bold" "sans-serif";
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 0.2em;
+    text-align: center;
+    letter-spacing: 5px;
+    color: black;
+    line-height: 40px;
 }
 
 #projects {
@@ -1909,171 +1791,396 @@ bottom: 2.86em;
     left: 0.4em;
 
 } 
+
+#menu {
+    width: 9em;
+    text-align: left;
+    font-size: 3em;
+    font-family: open-sans;
+    margin: -12em 0 0 -2.5em!important;
+    line-height: 1.2!important;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* PHONE */
+#page #mobileContactOverlay ul:nth-child(5) {
+	margin: 2.5em 0 0 0!important;
+    padding: 0!important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#page #mobileContactOverlay ul:nth-child(6) {
+	padding: 2.2em 0 0 0px;
+    margin: 0;
+    text-align: center;
+}
+
+.contactOverlayContainer {
+	width: 16em;
+    margin: 4em auto;
+}
+
+
+}
+
+@media (max-width: 550px) {
+
+#menu {
+    width: 9em;
+    text-align: left;
+    font-size: 2em;
+    font-family: open-sans;
+    margin: -19em 0 0 -2.5em!important;
+    line-height: 1.2!important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+}
+
+/*
+____________________
+
+TABLET (should be same as small browser)
+____________________   
+                                     
+*/
 @media only screen and (max-device-width: 1024px) {
 
-body, html {
-	overflow: scroll;
+
+a:active {
+	color: white;
 }
 
-#work {
+#mobileLogo {
+	display: inline-block;
+	width: 30em;
+    margin-top: 12em;
+}
+
+.contactOverlayContainer {
+	width: 16em;
+    margin: 11em auto;
+}
+
+.page-template-page-front .entry-content h1:first-child {
+	padding-top: 1.5em;
+	margin-bottom: 0em;
+	padding-left: 1em;
+    padding-right: 1em;
+}
+
+.featuredImageContainer img {
+	padding: 1em 0 0 0;
+}
+
+header #projects {
+  margin-top: 40em;
+}
+
+.entry-header .entry-title {
+	font-size: 3em;
+}
+
+#leftborder {
+	overflow-y: scroll;
+}
+
+#mobileXproject {
+	z-index: 999999;
+}
+
+#mobileXproject img {
+	position: fixed;
+}
+
+#menu li a {
+	line-height: 1;
+}
+
+#menu li {
+	padding-bottom: 1em;
+}
+
+logo {
+	width: 90%;
+}
+
+#page #work {
 	display: none;
+}
+
+#page #info {
+	display: none;
+}
+
+#page #mobileWork {
+    display: block;
+    position: fixed;
+	left: 2.2em;
+    top: 2em;
+    z-index: 999999;
+}
+
+#page #mobileXproject {
+	display: block;
+    position: absolute;
+    left: 4em;
+    top: 1em;
+}
+
+#page #mobileXemail {
+	display: block;
+    position: absolute;
+    right: 1.5em;
+    top: 1.7em;
+}
+
+#page #mobileEmail {
+	display: block;
+	position: fixed;
+	z-index: 9999;
+    right: 1.7em;
+    top: 1.5em;
+}
+
+#page .mobileDescription {
+	font-size: 1.1em;
+    margin: 2em auto 0em auto;
+    max-width: 14em;
+    text-align: left;
+    line-height: 1.3;
+    font-family: anivers;
+    font-weight: 700;
+}
+
+#page #mobileContactOverlay {
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: white;
+	text-align: center;
+}
+
+#page .name {
+	font-size: 62px;
+    margin-top: 1em;
+}
+
+#page .graphicdesignheader{
+	font-size: 20px;
+	margin: 1em 0 0 0;
+}
+
+#page .footer {
+	display: none;
+}
+
+#page #topborder {
+	height: 17px;
+}
+
+header #leftborder {
+	top: 1.57em;
+	bottom: 3.8em;
+	width: 800px;
+}
+
+#page #slideoutleft {
+	left:-783px;
+}
+
+#page #slideoutleft:hover {
+  left:-783px;
+}
+
+#page #slideoutright:hover {
+  right:18px;
+}
+
+#page #slideoutright {
+	z-index: 9999991;
+}
+
+#page #rightborder {
+top: 1.4em;
+margin: 0;
+bottom: 3em;
+}
+
+#page #bottomborder {
+	bottom:-23px;
+}
+
+
+
+#page #mobileOverlayLogo {
+	display: inline;
+    width: 240px;
+    margin-top: 2.5em;
+}
+
+#page .mobileName {
+    font-family: "Open sans", "open-sans", "opensans-bold" "sans-serif";
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 0.2em;
+    text-align: center;
+    letter-spacing: 5px;
+    color: black;
+    line-height: 40px;
+}
+
+#projects {
+    font-size: 18pt;
+    margin-top: 39em;
+    margin-right: 1.1em;
+}
+
+.mobileMenu {
+    border: 1px solid black;
+    width: 2em;
+    height: .3em;
+    margin: .2em;
+}
+
+.projectTitle {
+    font-size: 70pt;
+    top: -.3em;
+    left: 0.4em;
+
+} 
+
+#menu {
+    width: 9em;
+    text-align: left;
+    font-size: 3em;
+    font-family: open-sans;
+    margin: -12em 0 0 -2.5em!important;
+    line-height: 1.2!important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+#page #mobileContactOverlay ul:nth-child(5) {
+	margin: 2.5em 0 0 0!important;
+    padding: 0!important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#page #mobileContactOverlay ul:nth-child(6) {
+    padding: 2.2em 0 0 0px;
+    margin: 0;
+    text-align: center;
+}
+
+}
+
+@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+
+
+.contactOverlayContainer {
+    width: 16em;
+    margin: 6em auto;
+}
+
+#mobileLogo {
+    display: inline-block;
+    width: 30em;
+    margin-top: 7em;
+}
+
+}
+
+/*
+____________________
+
+MOBILE IPHONE 5, 6, AND 6S
+____________________   
+                                     
+*/
+
+
+
+/* IPHONE 6S */
+
+@media only screen and (max-device-width: 736px) and (orientation: portrait){
+
+#mobileLogo {
+    display: inline-block;
+    width: 15em;
+    margin-top: 11em;
+}
+
+.page-template-page-front .home-page-name {
+    font-family: "open-sans", "sans-serif";
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 4px;
+    color: black;
+    line-height: 0;
+    text-transform: uppercase;
+}
+
+.page-template-page-front .entry-content {
+	margin:0;
+}
+
+
+.page-template-page-front .entry-content h1:first-child {
+    padding-top: 0;
+    margin-bottom: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #menu {
-    width: 4em;
+    width: 9em;
     text-align: left;
-    font-size: 4em;
-    line-height: 2;
-    padding: 0;
-    margin: auto;
+    font-size: 2em;
+    font-family: open-sans;
+    margin: -19em 0 0 -2.5em!important;
+    line-height: 1.2!important;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-#info {
-	display: none;
+.contactOverlayContainer {
+	margin: 5em auto;
 }
 
-#mobileWork {
-    display: block;
-    position: fixed;
-	left: 2.2em;
-    top: 2em;
-    z-index: 999999;
 }
 
-#mobileXproject {
-	display: block;
-    position: absolute;
-    left: 4em;
-    top: 1em;
+@media only screen and (max-device-width: 736px) and (orientation: landscape){
+
+#page #mobileOverlayLogo {
+    display: inline;
+    width: 240px;
+    margin-top: 23.5em;
 }
 
-#mobileXemail {
-	display: block;
-    position: absolute;
-    right: 1.5em;
-    top: 1.7em;
-}
-
-#mobileEmail {
-	display: block;
-	position: fixed;
-	z-index: 9999;
-    right: 1.7em;
-    top: 1.5em;
-}
-
-.mobileDescription {
-	font-size: 30pt;
-    margin: 1em auto 0em auto;
-    max-width: 18em;
-    line-height: 1.3;
-}
-
-#mobileContactOverlay {
-	position: fixed;
-	z-index: 99999;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	background-color: white;
-}
-
-.name {
-	font-size: 62px;
-    margin-top: 1em;
-}
-
-.graphicdesignheader{
-	font-size: 20px;
-	margin: 1em 0 0 0;
-}
-
-.footer {
-	display: none;
-}
-
-#topborder {
-	height: 1em;
-}
-
-#leftborder {
-	top: 1.57em;
-	bottom: 3.67em;
-    margin: 0em 0em 0em -31.2em;
-}
-
-#slideoutleft:hover {
-  left:18px;
-}
-
-#slideoutright:hover {
-  right:18px;
-}
-
-#rightborder {
-top: 1.4em;
-margin: 0;
-bottom: 2.86em;
-}
-
-#bottomborder {
-	bottom:-30px;
-}
-
-#mobileLogo{
-	display: inline-block;
-	width: 450px;
-    margin-top: 7em;
-}
-
-#mobileOverlayLogo {
-	display: inline-block;
-	width: 150px;
-    margin-top: 3em;
-}
-
-.mobileName {
-  font-family: "Open sans", "open-sans", "opensans-bold" "sans-serif";
-  max-width: 100%;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  letter-spacing: 5px;
-  color: black;
-  line-height: 40px;
-}
-
-#projects {
-    font-size: 18pt;
-    margin-top: 39em;
-    margin-right: 1.1em;
-}
-
-.mobileMenu {
-    border: 1px solid black;
-    width: 2em;
-    height: .3em;
-    margin: .2em;
-}
-
-.projectTitle {
-    font-size: 70pt;
-    top: -.3em;
-    left: 0.4em;
-
-} 
+#page .mobileName {
+	margin-top: -33.8em;
 }
 
 
+}
 
+/* IPHONE 6 */
 
+@media only screen and (max-device-width: 375px) and (orientation: portrait){
 
-
-
+.contactOverlayContainer {
+    margin: 3em auto;
+}
+}
 
 
 
