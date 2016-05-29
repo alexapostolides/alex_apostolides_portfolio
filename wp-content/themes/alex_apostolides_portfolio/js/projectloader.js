@@ -80,13 +80,18 @@ MOBILE - Portait
                 var windowsize = $(window).width();
 
                 if (windowsize > 750 && $("#slideoutleft").css('left')=='-783px') {
-                    //alert('greater than');
+
                     $("#slideoutleft").css( 'left', '' );
                 }
 
                 if (windowsize > 750 && $("#slideoutleft").css('left')=='-30px') {
-                    //alert('greater than');
+
                     $("#slideoutleft").css( 'left', '' );
+                }
+
+                if (windowsize > 750 && $("#slideoutleft").css('display')=='block') {
+
+                    $("#mobileContactOverlay").css( 'display', 'none' );
                 }
 
 

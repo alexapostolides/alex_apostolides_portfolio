@@ -2156,20 +2156,43 @@ ____________________
 	margin: 5em auto;
 }
 
+.contactOverlayContainer ul:nth-child(6) {
+	display: none;
 }
+
+}
+
+/* IPHONE 6 PLUS */
 
 @media only screen and (max-device-width: 736px) and (orientation: landscape){
 
 #page #mobileOverlayLogo {
     display: inline;
     width: 240px;
-    margin-top: 23.5em;
+    margin-top: 25.5em;
 }
 
 #page .mobileName {
 	margin-top: -33.8em;
 }
 
+#mobileLogo {
+    display: inline-block;
+    width: 13em;
+    margin-top: 5em;
+}
+
+.page-template-page-front .entry-content h1:first-child {
+	padding-top: 0;
+}
+
+.page-template-page-front .entry-content {
+	margin:0;
+}
+
+.contactOverlayContainer ul:nth-child(6) {
+	display: none;
+}
 
 }
 
@@ -2181,6 +2204,140 @@ ____________________
     margin: 3em auto;
 }
 }
+
+@media only screen and (max-device-width: 667px) and (orientation: landscape){
+
+#page #mobileOverlayLogo {
+	margin-top: 24em;
+}
+
+#mobileLogo {
+	margin-top: 4em;
+}
+
+
+}
+
+/* IPHONE 5 */
+@media only screen and (max-device-width: 320px) and (orientation: portrait){
+
+#menu {
+    width: 9em;
+    text-align: left;
+    font-size: 1.3em;
+    font-family: open-sans;
+    margin: -19em 0 0 -1.5em!important;
+    line-height: 1.2!important;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+header #projects {
+    margin-top: 27em;
+}
+
+#mobileLogo {
+	 	margin-top: 8em;
+	 	width: 14em;
+}
+
+.page-template-page-front .entry-content h1:first-child {
+    padding-top: 0;
+    margin-bottom: 0em;
+    padding-left: .8em;
+    padding-right: .8em;
+}
+.page-template-page-front .home-page-name {
+	letter-spacing: 3px;
+}
+
+.page-template-page-front .entry-content {
+    margin: 0 0 0 -.1em;
+}
+
+#page #mobileOverlayLogo {
+	width: 180px;
+}
+
+}
+
+@media only screen and (max-device-width: 568px) and (orientation: landscape){
+
+#mobileLogo {
+    margin-top: 3em;
+    width: 10em;
+}
+
+#page #mobileOverlayLogo {
+    margin-top: 22.5em;
+}
+
+}	
+
+
+/* NEXUS 6P */
+
+@media only screen and (max-device-width: 773px) and (orientation: landscape){
+
+	#mobileLogo {
+    display: inline-block;
+    width: 17em;
+    margin-top: 4em;
+}
+
+.page-content, .entry-content, .entry-summary {
+	margin:0;
+}
+
+.page-template-page-front .entry-content h1:first-child {
+	padding-top: 0;
+}
+
+.contactOverlayContainer {
+    margin: 4em auto;
+}
+
+#page #mobileContactOverlay ul:nth-child(6) {
+	display: none;
+}
+
+#page #mobileOverlayLogo {
+    display: inline;
+    width: 240px;
+    margin-top: -20.5em;
+    padding-bottom: 10em;
+}
+
+}
+
+
+/* GALAXY S5 */
+
+@media only screen and (max-device-width: 640px) and (orientation: landscape){ 
+
+#mobileLogo {
+    display: inline-block;
+    width: 14em;
+    margin-top: 2.5em;
+}
+
+#page .mobileName {
+    margin-top: -2em;
+}
+
+}
+
+@media only screen and (max-device-width: 360px) and (orientation: portrait){ 
+
+#menu {
+    font-size: 1.7em;
+    margin: -22em 0 0 -2em!important;
+}
+
+}
+
+
+
 
 
 
