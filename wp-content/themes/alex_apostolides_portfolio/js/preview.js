@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
 // If mobile device, the preview will not load. This makes it so it will not load a buntch of featured images on the mobile device.
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- $("#previewOverlay").remove();
+ $("#previewOverlay, logo").remove();
 }
 
 

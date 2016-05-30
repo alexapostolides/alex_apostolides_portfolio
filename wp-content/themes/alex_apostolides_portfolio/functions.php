@@ -100,7 +100,7 @@ add_action( 'after_setup_theme', 'alex_apostolides_portfolio_content_width', 0 )
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
+
 function alex_apostolides_portfolio_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'alex_apostolides_portfolio' ),
@@ -113,7 +113,7 @@ function alex_apostolides_portfolio_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'alex_apostolides_portfolio_widgets_init' );
-
+ */
 /**
  * Enqueue scripts and styles.
  */
@@ -255,3 +255,27 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+// ALEX APOSTOLIDES CUSTOM CMS STUFF
+//------------------------------------------------------------------------------------------------------------------------------
+
+
+
+function remove_menus(){
+
+
+remove_menu_page( 'edit.php' );	// Removes Posts
+remove_menu_page( 'edit-comments.php' );	// Removes Comments
+
+
+}
+
+add_action( 'admin_menu', 'remove_menus' );
+
+
+
+

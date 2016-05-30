@@ -96,12 +96,17 @@ MOBILE
 <div id="mobileContactOverlay">
 	<div class="contactOverlayContainer">
 	<div id="mobileXemail"><img style="width: 3em;" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileX.png"></div>
-	<img id="mobileOverlayLogo" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileLogo.png">
+	<img id="mobileOverlayLogo" src="<?php echo get_theme_mod('logo', '');?>">
 	<p class="mobileName">ALEX APOSTOLIDES</p>
-	<p class="mobileDescription">Graphic design graduate at the Conservatory of Art & Design at Purchase College, SUNY. Currently based in New York. Looking for full time work.</p>
-	<ul>hello@alexapostolides.com</ul>
-	<ul>Resume</ul>
+	<p class="mobileDescription"><?php echo get_theme_mod('description', 'Graphic design graduate at the Conservatory of Art & Design at Purchase College, SUNY. Currently based in New York. Looking for full time work.'); ?></p>
+	<ul><?php echo get_theme_mod('email', 'hello@alexapostolides.com');?></ul>
+	<ul><a href="<?php echo get_theme_mod('resume', '');?>" target="_blank" class="link">Resume</a></ul>
 	</div>
+</div>
+
+
+<div id="emailOverlay" style="display: none;">
+
 </div>
 
 
@@ -143,11 +148,13 @@ BORDERS
 <div id="slideoutright">
 <div id="rightborder">
 <ul id="contact" class="paragraph">
-<p>Graphic design graduate at the Conservatory of <a target="_blank" href="http://www.purchase.design/" class ="link">Art & Design</a> at Purchase College, SUNY. Currently based in <a target="_blank" href="https://youtu.be/zalYJacOhpo" class ="link">New York</a>.</p>
+<p>
+<?php echo get_theme_mod('description', 'Graphic design graduate at the Conservatory of Art & Design at Purchase College, SUNY. Currently based in New York. Looking for full time work.'); ?>
+</p>
 
-<p><a href="mailto:hello@alexapostolides.com" class="link">hello@alexapostolides.com</a></p>
+<p><?php echo get_theme_mod('email', 'hello@alexapostolides.com');?></p>
 
-<p><a href="wp-content/themes/childofblankslate/images/ALEX_APOSTOLIDES_RESUME.pdf" target="_blank" class="link">Resume</a></p>
+<p><a href="<?php echo get_theme_mod('resume', '');?>" target="_blank" class="link">Resume</a></p>
 </ul>
 
 <p id="info" class="WorkInfo">info</p>

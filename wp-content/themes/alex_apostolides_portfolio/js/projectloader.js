@@ -1,28 +1,12 @@
 jQuery(document).ready(function ($) {
 
-
+/* Fades in 3D logo and entry content */
 $(window).load(function() {
 
 $("logo").delay('1300').fadeIn('slow');
+$("#content").delay('800').fadeIn('slow');
 
 });
-
-$(window).load(function() {
-
-   var is_mobile = false;
-
-    if( $('#mobileLogo').css('display')=='inline-block') {
-        is_mobile = true;       
-    }
-
-    if (is_mobile == true) {
-        $("logo").remove();
-        return true;
-    }
-
-
-});
-
 
 
 
@@ -30,17 +14,6 @@ $(window).load(function() {
 $(document).ready(function () {
 
 
-            $('.menu-item a').on('click', function (e) {
-                $("logo, name, #mobile").fadeOut('fast');
-                e.preventDefault();
-                var page = $(this).attr('href');
-               	$("#close").delay('500').fadeIn('slow');
-            });
-
-            $("#close").click(function(){
-                $("#close").fadeOut('fast');
-                $("logo").delay('1400').fadeIn('slow');
-            });
 /*
 ------------------------------------------------------------------------------------------------------
 MOBILE - Portait
@@ -56,9 +29,11 @@ MOBILE - Portait
                 // Adds class to Nav links
                 $(".menu-item a").addClass('mobileProject');
 
+
                 // Exit out of Mobile Nav
                 $("#mobileXproject").click(function(){
                     $("#slideoutleft").css("left", "-783px");
+                    $('#logoHomeButton').css("top", "-4em");
                 });
 
                 // Exit out of Mobile Nav when you click a project

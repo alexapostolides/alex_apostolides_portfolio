@@ -918,6 +918,32 @@ object {
     padding: 0 1em 0 1em;
 }
 
+.contentImageLandscape {
+	width: 80%;
+	padding: 1em;
+}
+
+.contentImagePortrait {
+	width: 50%;
+	padding: 2em;
+}
+
+
+#logoHomeButton {
+	width: 3em;
+    position: absolute;
+    top: -4em;
+    right: 2em;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#content {
+	display: none;
+}
+
 .menu ul {
 	margin: 0 0 1.5em 4em;
 }
@@ -1103,6 +1129,10 @@ header #projects {
   margin-top: 25.3em;
 }
 
+#rightborder #info {
+	top: 35.5em;
+}
+
 }
 
 
@@ -1183,6 +1213,19 @@ ____________________
     to   { opacity: 1; }
 }
 
+
+/*
+____________________
+
+EMAIL OVERLAY
+____________________   
+                                     
+*/
+
+#emailOverlay {
+	background-color: white;
+	z-index: 99999999999999;
+}
 
 
 /*
@@ -1334,21 +1377,23 @@ ____________________
 
 /* Right Border */
 #info {
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform-origin: left top 0;
-  -webkit-transform-origin: left top 0;
-  -moz-transform-origin: left top 0;
-  -ms-transform-origin: left top 0;
-  -o-transform-origin: left top 0;
-  float: left;
-  margin: -2em 0em 0 1em;
-  color: black;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform-origin: left top 0;
+    -webkit-transform-origin: left top 0;
+    -moz-transform-origin: left top 0;
+    -ms-transform-origin: left top 0;
+    -o-transform-origin: left top 0;
+    float: left;
+    position: absolute;
+    margin: -2em 0em 0 1em;
+    top: 28em;
+    color: black;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 }
 
 #rightborder {
