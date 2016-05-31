@@ -918,14 +918,45 @@ object {
     padding: 0 1em 0 1em;
 }
 
+.contentDescription {
+	padding: 3em 5em 15em 5em;
+}
+
+.featuredGif {
+    width: 15em;
+    margin: auto;
+}
+
+.page-template-page-content .featuredGif img {
+	padding: 0em;
+}
+
+.threeByFourPortrait {
+	width: 50%;
+    margin: auto;
+    padding-bottom: 10em;
+}
+
+.nineBySixteenPortrait {
+	width: 65%;
+	margin: auto;
+	padding: 10em 0 10em 0;
+}
+
+.sixteenByNineLandscape {
+    width: 100%;
+    margin: auto;
+    padding: 10em 0 10em 0;
+}
+
 .contentImageLandscape {
 	width: 80%;
 	padding: 1em;
 }
 
-.contentImagePortrait {
-	width: 50%;
-	padding: 2em;
+
+#content .nineBySixteenPortrait img {
+	padding: 5em;
 }
 
 
@@ -942,6 +973,7 @@ object {
 
 #content {
 	display: none;
+	padding: 5em;
 }
 
 .menu ul {
@@ -1028,7 +1060,7 @@ a:active {
 }
 
 .featuredImageContainer img {
-	padding: 6em 6em 0em 5.5em;
+	margin-left: -.5em;
 }
 
 
@@ -1107,6 +1139,10 @@ color:black;
 .page-template-page-front .entry-content h1:first-child {
 	padding-top: 1.5em;
 	margin-bottom: 0em;
+}
+
+.page-template-page-front #content {
+	padding: 0em;
 }
 
 .page-template-page-front .entry-title {
@@ -1295,7 +1331,15 @@ display: none;
 
 .wp-video {
 	max-width: 90%;
-    margin: 0em auto 10em auto;
+    margin: 10em auto 10em auto;
+    width: auto!important;
+    height: auto!important;
+}
+
+.portraitVideo {
+	max-width: 20em;
+	width: auto!important;
+    height: auto!important;
 }
 
 
@@ -1643,7 +1687,26 @@ ____________________
 */
 @media (max-width: 750px) {
 
+#content .nineBySixteenPortrait img {
+	padding: 0em 0 0em 0;
+}
 
+#content {
+	padding: 0em;
+}
+
+.contentDescription h1 {
+	font-size: .8em;
+}
+
+.portraitVideo {
+	max-width: 70%;
+}
+
+.threeByFourPortrait {
+	width: 90%;
+    margin: auto;
+}
 
 .page-template-page-front .entry-content h1:first-child {
 	padding-top: 1.5em;
@@ -1895,6 +1958,10 @@ ____________________
 
 a:active {
 	color: white;
+}
+
+#content {
+	padding: 0em;
 }
 
 #mobileLogo {
@@ -2218,7 +2285,7 @@ ____________________
 }
 
 #page .mobileName {
-	margin-top: -33.8em;
+    margin-top: 0;
 }
 
 #mobileLogo {
@@ -2248,6 +2315,7 @@ ____________________
 .contactOverlayContainer {
     margin: 3em auto;
 }
+
 }
 
 @media only screen and (max-device-width: 667px) and (orientation: landscape){
@@ -2275,6 +2343,10 @@ ____________________
     line-height: 1.2!important;
     font-weight: 900;
     text-transform: uppercase;
+}
+
+.contentDescription {
+    padding: 3em 2em 15em 2em;
 }
 
 header #projects {

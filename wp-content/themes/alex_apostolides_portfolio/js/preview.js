@@ -12,7 +12,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 // If the window loaded has a size of 600 or more, it will fire the preview function.
 $(window).load(function(){
 	var windowsize = $(window).width();
-	if (windowsize > 600) {
+	if (windowsize > 750) {
 		preview();
 	}
 });
@@ -21,7 +21,7 @@ $(window).load(function(){
 // If the window is resized to a size greater then 600, it will fire the preview function.
 $(window).resize(function(){
 	var windowsize = $(window).width();
-	if (windowsize > 600) {
+	if (windowsize > 750) {
 		preview();
 	}
 });

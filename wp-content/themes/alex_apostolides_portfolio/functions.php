@@ -41,6 +41,7 @@ function alex_apostolides_portfolio_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'custom-header' );
 
 	// This theme uses wp_nav_menu() in one location.
 
@@ -182,48 +183,7 @@ function theme_typekit_inline() {
 add_action( 'wp_head', 'theme_typekit_inline' );
 
 
-function my_theme_add_editor_styles() {
-    add_editor_style( 'custom-editor-style.css' );
-}
-add_action( 'init', 'my_theme_add_editor_styles' );
 
-
-
-// Custom Header styles
-function wpb_mce_buttons_2($formats) {
-	array_unshift($formats, 'styleselect');
-	return $formats;
-}
-add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
-
-function my_mce_before_init_insert_formats( $init_array ) {  
-
-// Define the style_formats array
-
-	$style_formats = array(  
-		// Each array child is a format with it's own settings
-		array(  
-			'title' => 'Home Page Name',  
-			'block' => 'span',  
-			'classes' => 'home-page-name',
-			'wrapper' => true,
-			
-		),  
-		array(  
-			'title' => 'Home Page Job Description',  
-			'block' => 'span',  
-			'classes' => 'home-page-job-description',
-			'wrapper' => true,
-		),
-	);  
-	// Insert the array, JSON ENCODED, into 'style_formats'
-	$init_array['style_formats'] = json_encode( $style_formats );  
-	
-	return $init_array;  
-  
-} 
-// Attach callback to 'tiny_mce_before_init' 
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
 
 
 
@@ -276,6 +236,92 @@ remove_menu_page( 'edit-comments.php' );	// Removes Comments
 
 add_action( 'admin_menu', 'remove_menus' );
 
+
+//------------------------------------------------------------------------------------------------------------------------------
+// ALEX APOSTOLIDES CUSTOM Visual Editor
+//------------------------------------------------------------------------------------------------------------------------------
+
+
+//Custom Styles
+
+
+function my_theme_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'init', 'my_theme_add_editor_styles' );
+
+
+
+// Custom Header styles
+function wpb_mce_buttons_2($formats) {
+	array_unshift($formats, 'styleselect');
+	return $formats;
+}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+function my_mce_before_init_insert_formats( $init_array ) {  
+
+// Define the style_formats array
+
+	$style_formats = array(  
+		// Each array child is a format with it's own settings
+		array(  
+			'title' => 'Home Page Name',  
+			'block' => 'span',  
+			'classes' => 'home-page-name',
+			'wrapper' => true,
+			
+		),  
+		array(  
+			'title' => 'Home Page Job Description',  
+			'block' => 'span',  
+			'classes' => 'home-page-job-description',
+			'wrapper' => true,
+		),
+		array(  
+			'title' => 'Description',  
+			'block' => 'div',  
+			'classes' => 'contentDescription',
+			'wrapper' => true,
+		),
+		array(  
+			'title' => 'Featured Gif',  
+			'block' => 'div',  
+			'classes' => 'featuredGif',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => '3x4 Portrait',  
+			'block' => 'div',  
+			'classes' => 'threeByFourPortrait',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => '9x16 Portrait',  
+			'block' => 'div',  
+			'classes' => 'nineBySixteenPortrait',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => '16x9 Landscape',  
+			'block' => 'div',  
+			'classes' => 'sixteenByNineLandscape',
+			'wrapper' => false,
+		),
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+
+
+
+
+//Featured Gif
 
 
 
