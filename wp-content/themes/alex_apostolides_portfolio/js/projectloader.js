@@ -6,6 +6,7 @@ $(window).load(function() {
 $("logo").delay('1300').fadeIn('slow');
 $("#content").delay('800').fadeIn('slow');
 $("video").prop("volume", 0.1);
+$('.wp-video-shortcode').removeAttr('controls');
 });
 
 

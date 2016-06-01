@@ -285,6 +285,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'wrapper' => true,
 		),
 		array(  
+			'title' => 'Portrait Video',  
+			'block' => 'div',  
+			'classes' => 'portraitVideo',
+			'wrapper' => false,
+		),
+		array(  
 			'title' => 'Featured Gif',  
 			'block' => 'div',  
 			'classes' => 'featuredGif',
@@ -321,7 +327,17 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 
 
-//Featured Gif
+//WORDPRESS VIDEO STYLE STRIPPER
 
+add_action( 'wp_print_scripts', 'no_mediaelement_scripts', 100 );
+add_filter('wp_video_shortcode_library','no_mediaelement');
 
+function no_mediaelement_scripts() {
+    wp_dequeue_script( 'wp-mediaelement' );
+    wp_deregister_script( 'wp-mediaelement' );
+}
+
+function no_mediaelement() {
+    return '';
+}
 
