@@ -279,6 +279,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'wrapper' => true,
 		),
 		array(  
+			'title' => 'Content Title',  
+			'block' => 'div',  
+			'classes' => 'contentTitle',
+			'wrapper' => true,
+		),
+		array(  
 			'title' => 'Description',  
 			'block' => 'div',  
 			'classes' => 'contentDescription',
@@ -329,7 +335,7 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 //WORDPRESS VIDEO STYLE STRIPPER
 
-add_action( 'wp_print_scripts', 'no_mediaelement_scripts', 100 );
+
 add_filter('wp_video_shortcode_library','no_mediaelement');
 
 function no_mediaelement_scripts() {

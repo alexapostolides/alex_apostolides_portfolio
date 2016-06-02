@@ -829,6 +829,7 @@ embed,
 iframe,
 object {
 	max-width: 100%;
+	margin: auto;
 }
 
 /*--------------------------------------------------------------
@@ -919,7 +920,7 @@ object {
 }
 
 .contentDescription {
-	padding: 3em 5em 15em 5em;
+	padding: 3em 5em 0em 5em;
 }
 
 .featuredGif {
@@ -973,7 +974,7 @@ object {
 
 #content {
 	display: none;
-	padding: 5em 5em 5em 4.7em;
+	padding: 5em 5em 5em 5.1em;
 }
 
 .menu ul {
@@ -1015,6 +1016,15 @@ object {
   text-transform: uppercase;
 }
 
+.contentTitle {
+  font-family: "anivers", "Courier";
+  font-size: 11px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 20em 0 15em 0;
+  text-transform: uppercase;
+}
 
 logo {
 	position: absolute;
@@ -1153,6 +1163,27 @@ color:black;
 	margin-top: .5em;
 }
 
+/*
+____________________
+
+VIDEO PLAYER
+____________________   
+                                     
+*/
+
+.portraitVideo {
+	max-width: 50%;
+}
+
+.landscapeVideo {
+	max-width: 95%;
+}
+
+.jetpack-video-wrapper {
+	padding: 5em 0;
+}
+
+
 
 /* HIGHER RESOLUTION */
 @media screen and (min-height: 800px) {
@@ -1170,6 +1201,27 @@ header #projects {
 }
 
 }
+
+
+
+/*
+____________________
+
+SLIDESHOW
+____________________   
+                                     
+*/
+
+
+.page-template-page-content .slideshow-window {
+	background-color: white!important;
+	border:none!important;
+}
+
+.page-template-page-content .slideshow-controls {
+	opacity: 0;
+}
+
 
 
 
@@ -1330,8 +1382,6 @@ display: none;
 }
 
 .wp-video {
-	max-width: 90%;
-    margin: 10em auto 10em auto;
     width: auto!important;
     height: auto!important;
 }

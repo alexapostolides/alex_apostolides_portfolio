@@ -5,14 +5,61 @@ $(window).load(function() {
 
 $("logo").delay('1300').fadeIn('slow');
 $("#content").delay('800').fadeIn('slow');
-$("video").prop("volume", 0.1);
-$('.wp-video-shortcode').removeAttr('controls');
 });
 
 
 
 
 $(document).ready(function () {
+
+
+
+/*
+------------------------------------------------------------------------------------------------------
+VIDEO
+------------------------------------------------------------------------------------------------------
+*/
+
+
+$("video").each(function(){
+
+
+// Defults Volume
+$(this).prop("volume", 0.1);
+
+
+// Remove controls on default, adds them on hover. Useful with the videoScrollLoader plug in.
+
+
+$(this).removeAttr("controls");
+$(this).mouseenter(function () {
+    $(this).attr("controls", "controls");
+});
+$(this).mouseleave(function () {
+    $(this).removeAttr("controls");
+});
+
+
+
+// Adds class to landscape and portrait videos to help with sizing.
+if ($(this).width() > $(this).height()) {
+
+    $(this).addClass('landscapeVideo');
+    $(this).removeAttr('height');
+    $(this).removeAttr('width');
+
+}
+
+if ($(this).width() < $(this).height()) {
+
+    $(this).addClass('portraitVideo');
+    $(this).removeAttr('height');
+    $(this).removeAttr('width');
+
+}
+});
+
+
 
 
 /*
