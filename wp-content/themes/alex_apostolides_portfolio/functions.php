@@ -161,6 +161,9 @@ if ( is_page('front-page')) {
     wp_register_script( 'videoScrollLoader', get_stylesheet_directory_uri() . '/js/videoScrollLoader.js', '');
     wp_enqueue_script( 'videoScrollLoader' );   
 
+    wp_register_script( 'sectionDisplay', get_stylesheet_directory_uri() . '/js/sectionDisplay.js', '');
+    wp_enqueue_script( 'sectionDisplay' );   
+
 }
 add_action( 'wp_enqueue_scripts', 'alex_apostolides_portfolio_scripts' );
 
@@ -320,6 +323,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'classes' => 'sixteenByNineLandscape',
 			'wrapper' => false,
 		),
+		array(  
+			'title' => 'Section',  
+			'block' => 'div',  
+			'classes' => 'section',
+			'wrapper' => false,
+		),
 	);  
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$init_array['style_formats'] = json_encode( $style_formats );  
@@ -332,16 +341,27 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 
 
+// Remove Admin Bar
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+
+  show_admin_bar(false);
+
+}
+
 
 //WORDPRESS VIDEO STYLE STRIPPER
 
 
 add_filter('wp_video_shortcode_library','no_mediaelement');
 
-function no_mediaelement_scripts() {
-    wp_dequeue_script( 'wp-mediaelement' );
-    wp_deregister_script( 'wp-mediaelement' );
-}
+
+// function no_mediaelement_scripts() {
+//     wp_dequeue_script( 'wp-mediaelement' );
+//     wp_deregister_script( 'wp-mediaelement' );
+// }
 
 function no_mediaelement() {
     return '';

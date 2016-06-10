@@ -121,7 +121,7 @@ OTHER
 
 <div id="previewOverlay">
 
-<?php $preview_1 = wp_get_attachment_url( get_post_thumbnail_id("2")); ?>
+<?php $preview_1 = wp_get_attachment_url( get_post_thumbnail_id("5")); ?>
 <div id="preview_1" class="previewProject" style="display: none; background-image: url(<?php echo $preview_1 ?>);"></div>
 
 <?php $preview_2 = wp_get_attachment_url( get_post_thumbnail_id("1791")); ?>
@@ -129,6 +129,24 @@ OTHER
 
 <?php $preview_3 = wp_get_attachment_url( get_post_thumbnail_id("1777")); ?>
 <div id="preview_3" class="previewProject" style="display: none; background-image: url(<?php echo $preview_3 ?>);"></div>
+
+<?php $preview_4 = wp_get_attachment_url( get_post_thumbnail_id("1779")); ?>
+<div id="preview_4" class="previewProject" style="display: none; background-image: url(<?php echo $preview_4 ?>);"></div>
+
+<?php $preview_5 = wp_get_attachment_url( get_post_thumbnail_id("1781")); ?>
+<div id="preview_5" class="previewProject" style="display: none; background-image: url(<?php echo $preview_5 ?>);"></div>
+
+<?php $preview_6 = wp_get_attachment_url( get_post_thumbnail_id("1783")); ?>
+<div id="preview_6" class="previewProject" style="display: none; background-image: url(<?php echo $preview_6 ?>);"></div>
+
+<?php $preview_7 = wp_get_attachment_url( get_post_thumbnail_id("1785")); ?>
+<div id="preview_7" class="previewProject" style="display: none; background-image: url(<?php echo $preview_7 ?>);"></div>
+
+<?php $preview_8 = wp_get_attachment_url( get_post_thumbnail_id("1787")); ?>
+<div id="preview_8" class="previewProject" style="display: none; background-image: url(<?php echo $preview_8 ?>);"></div>
+
+<?php $preview_9 = wp_get_attachment_url( get_post_thumbnail_id("1789")); ?>
+<div id="preview_9" class="previewProject" style="display: none; background-image: url(<?php echo $preview_9 ?>);"></div>
 
 
 </div>
@@ -142,6 +160,7 @@ BORDERS
 
 
 <div id="topborder">
+<div id="sectionDisplay"></div>
 </div>
 
 <!-- Right Border -->

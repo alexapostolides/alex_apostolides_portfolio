@@ -919,6 +919,14 @@ object {
     padding: 0 1em 0 1em;
 }
 
+#sectionDisplay {
+	text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-top: 0.3em;
+}
+
 .contentDescription {
 	padding: 3em 5em 0em 5em;
 }
@@ -1743,6 +1751,14 @@ ____________________
 
 #content {
 	padding: 0em;
+}
+
+#sectionDisplay {
+	text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 5px;
+    margin-top: 2em;
 }
 
 .contentDescription h1 {

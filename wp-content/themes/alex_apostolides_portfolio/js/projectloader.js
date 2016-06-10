@@ -24,20 +24,17 @@ VIDEO
 $("video").each(function(){
 
 
+// If a video has this class, then the controls will not show up when you hover over the video
+if ($(this).hasClass('noControls')){
+    $(this).removeAttr("controls");
+}
+
+
+// If a video does not have this class of 'noControls', then it will just set the default volume to .1
+if (!$(this).hasClass('noControls')){
 // Defults Volume
 $(this).prop("volume", 0.1);
-
-
-// Remove controls on default, adds them on hover. Useful with the videoScrollLoader plug in.
-
-
-$(this).removeAttr("controls");
-$(this).mouseenter(function () {
-    $(this).attr("controls", "controls");
-});
-$(this).mouseleave(function () {
-    $(this).removeAttr("controls");
-});
+}
 
 
 
