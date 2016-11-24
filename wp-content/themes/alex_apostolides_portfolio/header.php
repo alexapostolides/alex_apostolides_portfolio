@@ -25,9 +25,8 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'alex_apostolides_portfolio' ); ?></a>
-
 	<header id="masthead" class="site-header" role="banner">
-
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><p class="frontPageName">Alex Apostolides</p></a>
 
 <!-- 
 ––––––––––––––––––
@@ -54,7 +53,7 @@ NAVIGATION
 
 <div id="slideoutleft">
 <div id="leftborder">
-<div id="mobileXproject"><img style="width: 3em;" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileX.png"></div>
+<div id="mobileXproject"><img style="width: 3em;" src="http://alexapostolides.com/wp-content/uploads/2016/06/mobileX.png"></div>
 <div id="projects" class="paragraph">
 <p id="work" class="WorkInfo">work</p>
 
@@ -86,7 +85,7 @@ MOBILE
 </div>
 
 <div id="mobileEmail">
-	<img style="width: 3.5em;" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileEmail2.png">
+	<img style="width: 3.5em;" src="http://alexapostolides.com/wp-content/uploads/2016/06/mobileEmail2.png">
 </div>
 
 
@@ -95,11 +94,11 @@ MOBILE
 
 <div id="mobileContactOverlay">
 	<div class="contactOverlayContainer">
-	<div id="mobileXemail"><img style="width: 3em;" src="http://localhost/Wordpress%20Sites/wordpress/wp-content/uploads/2016/02/mobileX.png"></div>
+	<div id="mobileXemail"><img style="width: 3em;" src="http://alexapostolides.com/wp-content/uploads/2016/06/mobileX.png"></div>
 	<img id="mobileOverlayLogo" src="<?php echo get_theme_mod('logo', '');?>">
 	<p class="mobileName">ALEX APOSTOLIDES</p>
 	<p class="mobileDescription"><?php echo get_theme_mod('description', 'Graphic design graduate at the Conservatory of Art & Design at Purchase College, SUNY. Currently based in New York. Looking for full time work.'); ?></p>
-	<ul><?php echo get_theme_mod('email', 'hello@alexapostolides.com');?></ul>
+	<ul> <a href="mailto:<?php echo get_theme_mod('email', 'hello@alexapostolides.com');?>" target="_top"><?php echo get_theme_mod('email', 'hello@alexapostolides.com');?></a></ul>
 	<ul><a href="<?php echo get_theme_mod('resume', '');?>" target="_blank" class="link">Resume</a></ul>
 	</div>
 </div>
@@ -130,7 +129,7 @@ OTHER
 <?php $preview_3 = wp_get_attachment_url( get_post_thumbnail_id("1777")); ?>
 <div id="preview_3" class="previewProject" style="display: none; background-image: url(<?php echo $preview_3 ?>);"></div>
 
-<?php $preview_4 = wp_get_attachment_url( get_post_thumbnail_id("1779")); ?>
+<?php $preview_4 = wp_get_attachment_url( get_post_thumbnail_id("1785")); ?>
 <div id="preview_4" class="previewProject" style="display: none; background-image: url(<?php echo $preview_4 ?>);"></div>
 
 <?php $preview_5 = wp_get_attachment_url( get_post_thumbnail_id("1781")); ?>
@@ -139,7 +138,7 @@ OTHER
 <?php $preview_6 = wp_get_attachment_url( get_post_thumbnail_id("1783")); ?>
 <div id="preview_6" class="previewProject" style="display: none; background-image: url(<?php echo $preview_6 ?>);"></div>
 
-<?php $preview_7 = wp_get_attachment_url( get_post_thumbnail_id("1785")); ?>
+<?php $preview_7 = wp_get_attachment_url( get_post_thumbnail_id("1779")); ?>
 <div id="preview_7" class="previewProject" style="display: none; background-image: url(<?php echo $preview_7 ?>);"></div>
 
 <?php $preview_8 = wp_get_attachment_url( get_post_thumbnail_id("1787")); ?>
@@ -171,7 +170,7 @@ BORDERS
 <?php echo get_theme_mod('description', 'Graphic design graduate at the Conservatory of Art & Design at Purchase College, SUNY. Currently based in New York. Looking for full time work.'); ?>
 </p>
 
-<p><?php echo get_theme_mod('email', 'hello@alexapostolides.com');?></p>
+<p><a href="mailto:<?php echo get_theme_mod('email', 'hello@alexapostolides.com');?>" target="_top" ><?php echo get_theme_mod('email', 'hello@alexapostolides.com');?></a></p>
 
 <p><a href="<?php echo get_theme_mod('resume', '');?>" target="_blank" class="link">Resume</a></p>
 </ul>
@@ -184,7 +183,7 @@ BORDERS
 
 <div id="bottomborder">
 <p class="footer">
-<a class="link footer" target="_blank" href="https://www.behance.net/alexapostolides">behance</a>		//		<a href="https://dribbble.com/alexapostolides" target="_blank" class="link footer">dribbble</a>		//		<a href="https://www.facebook.com/alexapostolidesdesign" target="_blank" class="link footer">facebook</a>		//		<a href="https://www.linkedin.com/in/alexapostolides" target="_blank" class="link footer">linkedin</a>
+<a class="link footer" target="_blank" href="https://www.behance.net/alexapostolides">behance</a>		//		<a href="https://dribbble.com/alexapostolides" target="_blank" class="link footer">dribbble</a>		//		<a href="https://www.facebook.com/alexapostolidesdesign" target="_blank" class="link footer">facebook</a>		//		<a href="https://www.linkedin.com/in/alexapostolides" target="_blank" class="link footer">linkedin</a>		//		<a href="https://www.wwwoah.com" target="_blank" class="link footer">wwwoah</a>
 </p>
 </div>
 

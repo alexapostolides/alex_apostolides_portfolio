@@ -106,7 +106,7 @@ a:hover {
 }
 
 abbr[title] {
-	border-bottom: 1px dotted;
+
 }
 
 b,
@@ -286,7 +286,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-family: open-sans;
+	font-family: "PT Serif", "Serif";
 }
 
 
@@ -912,8 +912,9 @@ object {
     display: block;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 8em;
+    letter-spacing: 38px;
+    font-size: 5em;
+    font-weight: 100;
     line-height: 1em;
     margin-top: 1em;
     padding: 0 1em 0 1em;
@@ -921,14 +922,24 @@ object {
 
 #sectionDisplay {
 	text-transform: uppercase;
-    font-weight: 700;
-    font-size: 15px;
+    font-weight: 100;
+    font-size: 9pt;
     letter-spacing: 5px;
-    margin-top: 0.3em;
+    margin-top: 0.5em;
+    background-color: white;
+    height: 2em;
+    width: 100%;
+    position: absolute;
+    font-family: "PT Serif", "Serif";
 }
 
 .contentDescription {
-	padding: 3em 5em 0em 5em;
+    padding: 3em 5em 0em 5em;
+    font-weight: 100;
+    font-size: 15pt;
+    padding-left: 15%;
+    padding-right: 15%;
+    letter-spacing: 0px;
 }
 
 .featuredGif {
@@ -1088,7 +1099,7 @@ color:black;
 }
 
 .paragraph {
-  font-family: "anivers", "Andale Mono", "Courier";
+  font-family: "Open Sans", "sans-serif";
   font-size: 10pt;
   z-index: 99999;
   position: relative;
@@ -1104,7 +1115,7 @@ color:black;
 
 
 .header {
-  font-family: "Open sans", "open-sans", "opensans-bold" "sans-serif";
+  font-family: "Open Sans", "sans-serif";
   max-width: 100%;
   font-weight: 700;
   font-size: 48px;
@@ -1115,7 +1126,7 @@ color:black;
 }
 
 .name {
-  font-family: "Open sans", "open-sans", "opensans-bold" "sans-serif";
+  font-family: "Open Sans", "sans-serif";
   max-width: 100%;
   font-weight: 700;
   font-size: 32px;
@@ -1131,7 +1142,7 @@ color:black;
 
 
 .WorkInfo {
-  font-family: "open-sans", 'opensans-bold', "anivers";
+  font-family: "PT Serif", 'sans-serif';
   font-size: 13px;
   font-weight: 700;
   text-align: center;
@@ -1201,7 +1212,7 @@ header #projects {
 }
 
 #rightborder #contact {
-  margin-top: 25.3em;
+  margin-top: 27.3em;
 }
 
 #rightborder #info {
@@ -1278,7 +1289,47 @@ ____________________
     background-size: 40%;
 }
 
+#vimeo_player {
+/*	border:1px solid gray;*/
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
 
+.centerAbsolute{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.frontPageName{
+    font-family: 'PT Serif';
+    text-transform: uppercase;
+    font-size: 9pt;
+    letter-spacing: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999999;
+    -webkit-transition: .5s cubic-bezier(0.71, 0.01, 0.32, 1.03);
+    transition: .5s cubic-bezier(0.71, 0.01, 0.32, 1.03);
+    height: 3em;
+    padding-top: .8em;
+}
+
+a .frontPageName:hover {
+	color: black;
+	font-size: 9.5pt;
+	letter-spacing: 6px;
+
+}
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -1425,7 +1476,6 @@ ____________________
     left: 0px;
     right: 0px;
     height: 2.3em;
-    border-bottom: solid 1px;
     background-color: white;
     z-index: 999999;
 }
@@ -1462,18 +1512,17 @@ ____________________
     padding-top: 12px;
     z-index: 999999;
     text-align: center;
-    border-top: 1px solid black;
 }
 
 .footer {
-    font-family: "anivers", "Andale Mono", "Courier";
-    font-size: 10px;
-    font-variant: small-caps;
+    font-family: "PT Serif", "serif";
+    font-size: 7pt;
     letter-spacing: 2px;
     position: relative;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     color: black;
+    text-transform: uppercase;
 }
 
 
@@ -1499,7 +1548,6 @@ ____________________
 }
 
 #rightborder {
-border-left: 1px solid black;
     margin: 0 0em 0em -1.7em;
     width: 500px;
     top: 2.65em;
@@ -1508,6 +1556,8 @@ border-left: 1px solid black;
     position: absolute;
     background-color: white;
     z-index: 99999;
+    -webkit-transition: .4s cubic-bezier(0.71, 0.01, 0.32, 1.03);
+    transition: .4s cubic-bezier(0.71, 0.01, 0.32, 1.03);
 }
 
 #slideoutright {
@@ -1518,10 +1568,8 @@ position: fixed;
     right: 18px;
     background-color: white;
     z-index: 9999999;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    -webkit-transition: .4s cubic-bezier(0.71, 0.01, 0.32, 1.03);
+    transition: .4s cubic-bezier(0.71, 0.01, 0.32, 1.03);
 }
 
 #slideoutright:hover {
@@ -1529,13 +1577,13 @@ position: fixed;
 }
 
 #contact {
-  text-align: left;
-  font-size: 10pt;
-  width: 18em;
-  margin-top: 18.4em;
-  margin-bottom: -1.4em;
-  margin-left: 4em;
-  letter-spacing: 0px;
+	text-align: left;
+    font-size: 10pt;
+    width: 20em;
+    margin-top: 20.4em;
+    margin-bottom: -1.4em;
+    margin-left: 2em;
+    letter-spacing: 0px;
 }
 
 #slideoutright:hover #slideout_innerright {
@@ -1568,7 +1616,6 @@ position: fixed;
 }
 
 #leftborder {
-    border-right: solid 1px;
     width: 500px;
     height: auto;
     position: absolute;
@@ -1586,10 +1633,8 @@ position: fixed;
     left: -460px;
     background-color: white;
     z-index: 9999999;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    -webkit-transition: .4s cubic-bezier(0.71, 0.01, 0.32, 1.03);
+    transition: .4s cubic-bezier(0.71, 0.01, 0.32, 1.03);
 }
 
 #slideoutleft:hover {
@@ -1745,6 +1790,7 @@ ____________________
 */
 @media (max-width: 750px) {
 
+
 #content .nineBySixteenPortrait img {
 	padding: 0em 0 0em 0;
 }
@@ -1813,9 +1859,6 @@ header #projects {
 	padding-bottom: 1em;
 }
 
-logo {
-	width: 90%;
-}
 
 #page #work {
 	display: none;
@@ -1891,7 +1934,7 @@ logo {
 }
 
 #page #topborder {
-	height: 17px;
+	display: none;
 }
 
 header #leftborder {
@@ -1901,7 +1944,7 @@ header #leftborder {
 }
 
 #page #slideoutleft {
-	left:-783px;
+	display: none;
 }
 
 #page #slideoutleft:hover {
@@ -1913,7 +1956,7 @@ header #leftborder {
 }
 
 #page #slideoutright {
-	z-index: 9999991;
+	display: none;
 }
 
 #page #rightborder {
@@ -1923,7 +1966,7 @@ bottom: 3em;
 }
 
 #page #bottomborder {
-	bottom:-23px;
+	display: none;
 }
 
 
@@ -1953,7 +1996,6 @@ bottom: 3em;
 }
 
 .mobileMenu {
-    border: 1px solid black;
     width: 2em;
     height: .3em;
     margin: .2em;
@@ -2159,6 +2201,7 @@ logo {
 
 #page #topborder {
 	height: 17px;
+	display: none;
 }
 
 header #leftborder {
@@ -2220,7 +2263,6 @@ bottom: 3em;
 }
 
 .mobileMenu {
-    border: 1px solid black;
     width: 2em;
     height: .3em;
     margin: .2em;

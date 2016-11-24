@@ -13,6 +13,14 @@ $("#content").delay('800').fadeIn('slow');
 $(document).ready(function () {
 
 
+var iframe = $('#vimeo_player')[0],
+    player = $f(iframe),
+     status = $('.status');
+
+    player.addEvent('ready', function() {
+         player.api('setVolume', 0);
+});
+
 
 /*
 ------------------------------------------------------------------------------------------------------

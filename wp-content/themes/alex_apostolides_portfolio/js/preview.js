@@ -2,9 +2,7 @@ jQuery(document).ready(function ($) {
 
 
 
-$(window).load(function(){
-    $('video').load('html');
-});
+
 
 
 // If mobile device, the preview will not load. This makes it so it will not load a buntch of featured images on the mobile device.

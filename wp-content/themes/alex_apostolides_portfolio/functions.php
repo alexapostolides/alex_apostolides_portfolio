@@ -141,28 +141,11 @@ function alex_apostolides_portfolio_scripts() {
     wp_enqueue_script( 'preview' );
 
     wp_register_script( 'projectloader', get_stylesheet_directory_uri() . '/js/projectloader.js', array('jquery'));
-    wp_enqueue_script( 'projectloader' );
-
-
-if ( is_page('front-page')) {
-    wp_register_script( 'threemin', get_stylesheet_directory_uri() . '/js/three.min.js', '');
-    wp_enqueue_script( 'threemin' );
-
-    wp_register_script( 'three', get_stylesheet_directory_uri() . '/js/three.js', '');
-    wp_enqueue_script( 'three' );
-
-    wp_register_script( 'objloader', get_stylesheet_directory_uri() . '/js/OBJLoader.js', '');
-    wp_enqueue_script( 'objloader' );
-
-    wp_register_script( 'cube', get_stylesheet_directory_uri() . '/js/cube.js', '', '', true);
-    wp_enqueue_script( 'cube' );
-}
-
-    wp_register_script( 'videoScrollLoader', get_stylesheet_directory_uri() . '/js/videoScrollLoader.js', '');
-    wp_enqueue_script( 'videoScrollLoader' );   
+    wp_enqueue_script( 'projectloader' ); 
 
     wp_register_script( 'sectionDisplay', get_stylesheet_directory_uri() . '/js/sectionDisplay.js', '');
     wp_enqueue_script( 'sectionDisplay' );   
+
 
 }
 add_action( 'wp_enqueue_scripts', 'alex_apostolides_portfolio_scripts' );
