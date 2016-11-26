@@ -41,11 +41,10 @@ function alex_apostolides_portfolio_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'custom-header' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'alex_apostolides_portfolio' ),
-	) );
+
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -102,7 +101,7 @@ add_action( 'after_setup_theme', 'alex_apostolides_portfolio_content_width', 0 )
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
+
 function alex_apostolides_portfolio_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'alex_apostolides_portfolio' ),
@@ -115,7 +114,7 @@ function alex_apostolides_portfolio_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'alex_apostolides_portfolio_widgets_init' );
-
+ */
 /**
  * Enqueue scripts and styles.
  */
@@ -142,22 +141,11 @@ function alex_apostolides_portfolio_scripts() {
     wp_enqueue_script( 'preview' );
 
     wp_register_script( 'projectloader', get_stylesheet_directory_uri() . '/js/projectloader.js', array('jquery'));
-    wp_enqueue_script( 'projectloader' );
+    wp_enqueue_script( 'projectloader' ); 
 
-    wp_register_script( 'threemin', get_stylesheet_directory_uri() . '/js/three.min.js', '');
-    wp_enqueue_script( 'threemin' );
+    wp_register_script( 'sectionDisplay', get_stylesheet_directory_uri() . '/js/sectionDisplay.js', '');
+    wp_enqueue_script( 'sectionDisplay' );   
 
-    wp_register_script( 'three', get_stylesheet_directory_uri() . '/js/three.js', '');
-    wp_enqueue_script( 'three' );
-
-    wp_register_script( 'objloader', get_stylesheet_directory_uri() . '/js/OBJLoader.js', '');
-    wp_enqueue_script( 'objloader' );
-
-    wp_register_script( 'cube', get_stylesheet_directory_uri() . '/js/cube.js', '', '', true);
-    wp_enqueue_script( 'cube' );
-
-    wp_register_script( 'videoScrollLoader', get_stylesheet_directory_uri() . '/js/videoScrollLoader.js', '');
-    wp_enqueue_script( 'videoScrollLoader' );   
 
 }
 add_action( 'wp_enqueue_scripts', 'alex_apostolides_portfolio_scripts' );
@@ -179,6 +167,68 @@ function theme_typekit_inline() {
 <?php }
 }
 add_action( 'wp_head', 'theme_typekit_inline' );
+
+
+
+
+
+
+
+
+
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+// ALEX APOSTOLIDES CUSTOM CMS STUFF
+//------------------------------------------------------------------------------------------------------------------------------
+
+
+
+function remove_menus(){
+
+
+remove_menu_page( 'edit.php' );	// Removes Posts
+remove_menu_page( 'edit-comments.php' );	// Removes Comments
+
+
+}
+
+add_action( 'admin_menu', 'remove_menus' );
+
+
+//------------------------------------------------------------------------------------------------------------------------------
+// ALEX APOSTOLIDES CUSTOM Visual Editor
+//------------------------------------------------------------------------------------------------------------------------------
+
+
+//Custom Styles
 
 
 function my_theme_add_editor_styles() {
@@ -214,6 +264,54 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'classes' => 'home-page-job-description',
 			'wrapper' => true,
 		),
+		array(  
+			'title' => 'Content Title',  
+			'block' => 'div',  
+			'classes' => 'contentTitle',
+			'wrapper' => true,
+		),
+		array(  
+			'title' => 'Description',  
+			'block' => 'div',  
+			'classes' => 'contentDescription',
+			'wrapper' => true,
+		),
+		array(  
+			'title' => 'Portrait Video',  
+			'block' => 'div',  
+			'classes' => 'portraitVideo',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => 'Featured Gif',  
+			'block' => 'div',  
+			'classes' => 'featuredGif',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => '3x4 Portrait',  
+			'block' => 'div',  
+			'classes' => 'threeByFourPortrait',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => '9x16 Portrait',  
+			'block' => 'div',  
+			'classes' => 'nineBySixteenPortrait',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => '16x9 Landscape',  
+			'block' => 'div',  
+			'classes' => 'sixteenByNineLandscape',
+			'wrapper' => false,
+		),
+		array(  
+			'title' => 'Section',  
+			'block' => 'div',  
+			'classes' => 'section',
+			'wrapper' => false,
+		),
 	);  
 	// Insert the array, JSON ENCODED, into 'style_formats'
 	$init_array['style_formats'] = json_encode( $style_formats );  
@@ -226,31 +324,29 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 
 
+// Remove Admin Bar
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+
+  show_admin_bar(false);
+
+}
 
 
+//WORDPRESS VIDEO STYLE STRIPPER
 
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+add_filter('wp_video_shortcode_library','no_mediaelement');
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
 
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
+// function no_mediaelement_scripts() {
+//     wp_dequeue_script( 'wp-mediaelement' );
+//     wp_deregister_script( 'wp-mediaelement' );
+// }
 
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
+function no_mediaelement() {
+    return '';
+}
 
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

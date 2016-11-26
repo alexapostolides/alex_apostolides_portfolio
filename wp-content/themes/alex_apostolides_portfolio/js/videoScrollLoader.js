@@ -1,3 +1,6 @@
+jQuery(document).ready(function ($) {
+
+
 var videos = document.getElementsByTagName("video"),
 fraction = 0.8;
 function checkScroll() {
@@ -27,3 +30,5 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll, false);
 window.addEventListener('resize', checkScroll, false);
+
+});

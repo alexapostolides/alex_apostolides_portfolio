@@ -1,35 +1,11 @@
 jQuery(document).ready(function ($) {
 
-
+/* Fades in 3D logo and entry content */
 $(window).load(function() {
-
-   var pathname = window.location.pathname;
-
 
 $("logo").delay('1300').fadeIn('slow');
-
-    if (pathname.indexOf("projects") > -1) {
-        $("logo").remove();
-        return true;
-    }
+$("#content").delay('800').fadeIn('slow');
 });
-
-$(window).load(function() {
-
-   var is_mobile = false;
-
-    if( $('#mobileLogo').css('display')=='inline-block') {
-        is_mobile = true;       
-    }
-
-    if (is_mobile == true) {
-        $("logo").remove();
-        return true;
-    }
-
-
-});
-
 
 
 
@@ -37,29 +13,85 @@ $(window).load(function() {
 $(document).ready(function () {
 
 
-            $('.menu-item a').on('click', function (e) {
-                $("logo, name, #mobile").fadeOut('fast');
-                e.preventDefault();
-                var page = $(this).attr('href');
-               	$("#close").delay('500').fadeIn('slow');
-            });
+var iframe = $('#vimeo_player')[0],
+    player = $f(iframe),
+     status = $('.status');
 
-            $("#close").click(function(){
-                $("#close").fadeOut('fast');
-                $("logo").delay('1400').fadeIn('slow');
-            });
+    player.addEvent('ready', function() {
+         player.api('setVolume', 0);
+});
+
+
 /*
-MOBILE
+------------------------------------------------------------------------------------------------------
+VIDEO
+------------------------------------------------------------------------------------------------------
 */
+
+
+$("video").each(function(){
+
+
+// If a video has this class, then the controls will not show up when you hover over the video
+if ($(this).hasClass('noControls')){
+    $(this).removeAttr("controls");
+}
+
+
+// If a video does not have this class of 'noControls', then it will just set the default volume to .1
+if (!$(this).hasClass('noControls')){
+// Defults Volume
+$(this).prop("volume", 0.1);
+}
+
+
+
+// Adds class to landscape and portrait videos to help with sizing.
+if ($(this).width() > $(this).height()) {
+
+    $(this).addClass('landscapeVideo');
+    $(this).removeAttr('height');
+    $(this).removeAttr('width');
+
+}
+
+if ($(this).width() < $(this).height()) {
+
+    $(this).addClass('portraitVideo');
+    $(this).removeAttr('height');
+    $(this).removeAttr('width');
+
+}
+});
+
+
+
+
+/*
+------------------------------------------------------------------------------------------------------
+MOBILE - Portait
+------------------------------------------------------------------------------------------------------
+*/
+
+
             $("#mobileWork").click(function(){
 
-                $("#slideoutleft").css("left", "460px");
+                // Slides when clicked
+                $("#slideoutleft").css("left", "-30px");
+
+                // Adds class to Nav links
                 $(".menu-item a").addClass('mobileProject');
+
+
+                // Exit out of Mobile Nav
                 $("#mobileXproject").click(function(){
-                    $("#slideoutleft").css("left", "19px");
+                    $("#slideoutleft").css("left", "-783px");
+                    $('#logoHomeButton').css("top", "-4em");
                 });
+
+                // Exit out of Mobile Nav when you click a project
                 $(".mobileProject").click(function(){
-                    $("#slideoutleft").css("left", "19px");
+                    $("#slideoutleft").css("left", "-183px");
                     $("#mobileContactOverlay").fadeOut('fast');
                     $("#mobileLogo, #previewOverlay").hide();
                     $("#close").css("top","-2em");
@@ -68,16 +100,28 @@ MOBILE
             });
 
 
+
 // REMOVES STYLING ON LEFT SLIDER WHEN PAGE RESIZES
 
             $(window).resize(function(){
 
                 var windowsize = $(window).width();
 
-                if (windowsize > 600 && $("#slideoutleft").css('left')=='19px') {
-                    //alert('greater than');
+                if (windowsize > 750 && $("#slideoutleft").css('left')=='-783px') {
+
                     $("#slideoutleft").css( 'left', '' );
                 }
+
+                if (windowsize > 750 && $("#slideoutleft").css('left')=='-30px') {
+
+                    $("#slideoutleft").css( 'left', '' );
+                }
+
+                if (windowsize > 750 && $("#slideoutleft").css('display')=='block') {
+
+                    $("#mobileContactOverlay").css( 'display', 'none' );
+                }
+
 
             });
 
@@ -86,11 +130,19 @@ MOBILE
 
             $("#mobileEmail").click(function(){
                     $("#mobileContactOverlay").fadeIn('fast');
-                    $("#slideoutleft").css("left", "19px");
+                    $("#slideoutleft").css("left", "-783px");
                     $("#mobileXemail").click(function(){
                         $("#mobileContactOverlay").fadeOut('fast');
                     });
             });
+
+/*
+------------------------------------------------------------------------------------------------------
+END MOBILE
+------------------------------------------------------------------------------------------------------
+*/
+
+
 
         });
 });
